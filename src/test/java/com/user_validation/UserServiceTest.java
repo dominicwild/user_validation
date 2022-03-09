@@ -3,6 +3,8 @@ package com.user_validation;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -40,7 +42,7 @@ class UserServiceTest {
     }
 
     @Test
-    void user_created_by_repository_is_returned(){
+    void user_created_by_repository_is_returned() {
         when(userRepository.create(VALID_USER)).thenReturn(CREATED_USER);
 
         User user = service.createUser(VALID_USER);
@@ -50,7 +52,8 @@ class UserServiceTest {
 
     @Test
     void invalid_user_throws_exception() {
-        when(userValidator.validate(INVALID_USER)).thenThrow(new ValidationException());
+        doThrow(new ValidationException()).when(userValidator).validate(any());
+
         assertThrows(ValidationException.class, () -> service.createUser(INVALID_USER));
     }
 
