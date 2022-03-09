@@ -33,6 +33,13 @@
         <!-- Dependencies -->
 
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
+        
+
         <!-- Testing dependencies-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
