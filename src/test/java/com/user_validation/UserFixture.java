@@ -10,7 +10,8 @@ public class UserFixture {
         return new User()
                 .firstName("John")
                 .lastName("Doe")
-                .email("john@doe.com");
+                .email("john@doe.com")
+                .age(20);
     }
 
     public static User createdUser() {

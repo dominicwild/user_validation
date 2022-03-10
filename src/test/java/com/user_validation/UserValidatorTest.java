@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,13 +18,13 @@ class UserValidatorTest {
     private static final User VALID_USER = UserFixture.validUser();
 
     @Mock
-    Validator validator1;
+    Validator<User> validator1;
 
     @Mock
-    Validator validator2;
+    Validator<User> validator2;
 
     @Mock
-    Validator validator3;
+    Validator<User> validator3;
 
     UserValidator userValidator;
 
