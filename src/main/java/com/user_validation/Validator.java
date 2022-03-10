@@ -1,7 +1,7 @@
 package com.user_validation;
 
-public interface Validator {
+public interface Validator<T> {
 
-    void validate(User validUser);
+    void validate(T toValidate);
 
 }

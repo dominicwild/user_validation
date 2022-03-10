@@ -6,7 +6,7 @@ import com.user_validation.User;
 import com.user_validation.ValidationException;
 import com.user_validation.Validator;
 
-public class EmailValidator implements Validator {
+public class EmailValidator implements Validator<User> {
 
     @Override
     public void validate(User user) {

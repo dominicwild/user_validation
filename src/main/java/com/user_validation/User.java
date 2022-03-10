@@ -7,7 +7,16 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
+    private int age;
 
+    public int getAge() {
+        return this.age;
+    }
+
+    public User age(int age) {
+        this.age = age;
+        return this;
+    }
 
     public String getFirstName() {
         return this.firstName;
@@ -33,7 +42,6 @@ public class User {
         this.email = email;
     }
 
-
     public User firstName(String firstName) {
         setFirstName(firstName);
         return this;
@@ -49,7 +57,6 @@ public class User {
         return this;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -58,13 +65,13 @@ public class User {
             return false;
         }
         User user = (User) o;
-        return Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(email, user.email);
+        return Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName)
+                && Objects.equals(email, user.email);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, email);
     }
-    
 
 }
