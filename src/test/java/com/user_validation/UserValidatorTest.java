@@ -16,7 +16,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class UserValidatorTest {
 
-    private static final User VALID_USER = UserBuilder.validUser();
+    private static final User VALID_USER = UserFixture.validUser();
 
     @Mock
     Validator validator1;

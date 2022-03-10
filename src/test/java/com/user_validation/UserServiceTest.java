@@ -17,9 +17,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class UserServiceTest {
 
-    private static final User VALID_USER = UserBuilder.validUser();
-    private static final User INVALID_USER = UserBuilder.invalidUser();
-    private static final User CREATED_USER = UserBuilder.createdUser();
+    private static final User VALID_USER = UserFixture.validUser();
+    private static final User INVALID_USER = UserFixture.invalidUser();
+    private static final User CREATED_USER = UserFixture.createdUser();
 
     @Mock
     UserRepository userRepository;

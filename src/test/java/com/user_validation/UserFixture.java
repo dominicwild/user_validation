@@ -1,6 +1,6 @@
 package com.user_validation;
 
-public class UserBuilder {
+public class UserFixture {
 
     public static User invalidUser() {
         return new User();
