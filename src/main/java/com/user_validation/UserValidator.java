@@ -4,9 +4,9 @@ import java.util.Set;
 
 public class UserValidator {
 
-    Set<Validator> validators;
+    Set<Validator<User>> validators;
 
-    public UserValidator(Validator... validators) {
+    public UserValidator(Validator<User>... validators) {
         this.validators = Set.of(validators);
     }
 
